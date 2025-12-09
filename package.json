@@ -2,14 +2,14 @@
   "name": "portfolio-todolist-backend",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
+"scripts": {
   "dev": "tsx watch src/server.ts",
-  "build": "node_modules/.bin/prisma generate && tsc",
+  "build": "npx prisma@6.19.0 generate && tsc",
   "start": "npm run build && node dist/server.js",
-  "prisma:generate": "node_modules/.bin/prisma generate",
-  "prisma:migrate": "node_modules/.bin/prisma migrate dev",
-  "prisma:studio": "node_modules/.bin/prisma studio",
-  "postinstall": "node_modules/.bin/prisma generate || true"
+  "prisma:generate": "npx prisma@6.19.0 generate",
+  "prisma:migrate": "npx prisma@6.19.0 migrate dev",
+  "prisma:studio": "npx prisma@6.19.0 studio",
+  "postinstall": "npx prisma@6.19.0 generate || true"
 },
   "dependencies": {
     "@prisma/client": "6.19.0",
