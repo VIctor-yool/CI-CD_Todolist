@@ -28,5 +28,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "overrides": {
+    "prisma": "6.19.0",
+    "@prisma/client": "6.19.0"
+  }
 }
