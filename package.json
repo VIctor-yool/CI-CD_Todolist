@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
   "dev": "tsx watch src/server.ts",
-  "build": "npx prisma generate && tsc",
+  "build": "node_modules/.bin/prisma generate && tsc",
   "start": "npm run build && node dist/server.js",
-  "prisma:generate": "npx prisma generate",
-  "prisma:migrate": "npx prisma migrate dev",
-  "prisma:studio": "npx prisma studio"
+  "prisma:generate": "node_modules/.bin/prisma generate",
+  "prisma:migrate": "node_modules/.bin/prisma migrate dev",
+  "prisma:studio": "node_modules/.bin/prisma studio",
+  "postinstall": "node_modules/.bin/prisma generate || true"
 },
   "dependencies": {
     "@prisma/client": "6.19.0",
